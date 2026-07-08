@@ -112,6 +112,24 @@
             margin-bottom: 8px;
         }
 
+        /* Input Sazlamalary */
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .input-field:focus {
+            border-color: var(--gold-primary);
+            outline: none;
+        }
+
         /* Button */
         .btn-gold {
             display: inline-block;
@@ -120,10 +138,13 @@
             font-weight: bold;
             padding: 12px 25px;
             text-decoration: none;
+            border: none;
             border-radius: 4px;
             transition: background 0.3s;
             text-align: center;
             margin-top: 15px;
+            font-size: 1rem;
+            width: 100%;
         }
 
         .btn-gold:hover {
@@ -150,6 +171,7 @@
 
     <div class="container">
 
+        <!-- HOWPSUZLYK DUÝDURYŞY -->
         <div class="danger-zone">
             <h2>⚠️ IŇ MÖHÜM ERÝER: HOWPSUZLYK</h2>
             <p>Himiýa dermanlary bilen işlemäge başlamankaňyz şu şertleri hökman ýerine ýetiriň:</p>
@@ -160,6 +182,7 @@
             </ul>
         </div>
 
+        <!-- 1-NJI ÄDIM -->
         <div class="step-card">
             <span class="step-number">Ädim 1</span>
             <h3>Gerekli Materiallary Jemlemek</h3>
@@ -171,6 +194,7 @@
             </ul>
         </div>
 
+        <!-- 2-NJI ÄDIM -->
         <div class="step-card">
             <span class="step-number">Ädim 2</span>
             <h3>Platalary Taýýarlamak</h3>
@@ -181,6 +205,7 @@
             </ul>
         </div>
 
+        <!-- 3-NJI ÄDIM -->
         <div class="step-card">
             <span class="step-number">Ädim 3</span>
             <h3>Mis Eretmek Moduly (Garyndy)</h3>
@@ -192,6 +217,7 @@
             </ul>
         </div>
 
+        <!-- 4-NJI ÄDIM -->
         <div class="step-card">
             <span class="step-number">Ädim 4</span>
             <h3>Altyn Bölejiklerini Süzüp Almak</h3>
@@ -203,6 +229,7 @@
             </ul>
         </div>
 
+        <!-- 5-NJI ÄDIM -->
         <div class="step-card">
             <span class="step-number">Ädim 5</span>
             <h3>Eretmek we Arassa Altyn</h3>
@@ -214,8 +241,23 @@
             </ul>
         </div>
 
-        <div style="text-align: center;">
-            <a href="#" class="btn-gold" onclick="alert('Tehniki goldaw we hasaplaýjy gural ýakynda goşular!')">Täze Funksiýalary Gör</a>
+        <!-- 🛠️ TÄZE FUNKSIÝA: ALTYN HASAPLAÝJY GURAL -->
+        <div class="step-card" style="border-left-color: var(--gold-primary);">
+            <span class="step-number">Hasaplaýjy</span>
+            <h3>E-Waste Altyn Hasaplaýjysy</h3>
+            <p>Eliňizdäki galyndy platalaryň takmyny agramyny giriziň we çykjak altyny hasaplaň:</p>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="boardWeight" style="color:#aaa; font-size:0.9rem;">Platalaryň umumy agramy (KG):</label>
+                <input type="number" id="boardWeight" class="input-field" placeholder="Meselem: 5">
+            </div>
+            
+            <button class="btn-gold" onclick="calculateGold()">Hasapla</button>
+            
+            <div id="calcResult" style="margin-top: 20px; padding: 15px; background: rgba(212,175,55,0.05); border: 1px dashed var(--gold-primary); border-radius: 4px; display: none; text-align: center;">
+                <p style="margin: 5px 0; font-size: 1.2rem;">✨ Garaşylýan Altyn: <strong id="goldGrams" style="color: var(--gold-primary);">0</strong> gram</p>
+                <p style="margin: 5px 0; font-size: 0.9rem; color: #888;">*Bu ortaça hasaplamadyr, platalaryň görnüşine görä üýtgep biler.</p>
+            </div>
         </div>
 
     </div>
@@ -224,5 +266,28 @@
         <p>&copy; 2026 AMAN HAYITMURADOV. Ähli hukuklar goralan.</p>
     </footer>
 
+    <script>
+        function calculateGold() {
+            let weight = parseFloat(document.getElementById('boardWeight').value);
+            let resultDiv = document.getElementById('calcResult');
+            let goldGramsSpan = document.getElementById('goldGrams');
+
+            if (!weight || weight <= 0) {
+                // Bu ýerde hem braunzer alertyny ulanman, göni sahypada duýdurýarys
+                resultDiv.style.display = 'block';
+                resultDiv.style.borderColor = '#ff3333';
+                resultDiv.innerHTML = '<p style="color:#ff3333; margin:0;">Hökman dogry agram (KG) giriziň!</p>';
+                return;
+            }
+            
+            // Düzwüwli hasaplama: 1 KG platadan takmyny 0.2 gram altyn çykýar
+            let estimatedGold = (weight * 0.2).toFixed(2);
+            
+            // Netijäni ekrana çykarmak
+            resultDiv.style.borderColor = 'var(--gold-primary)';
+            resultDiv.innerHTML = '<p style="margin: 5px 0; font-size: 1.2rem;">✨ Garaşylýan Altyn: <strong style="color: var(--gold-primary);">' + estimatedGold + '</strong> gram</p><p style="margin: 5px 0; font-size: 0.9rem; color: #888;">*Bu ortaça hasaplamadyr, platalaryň görnüşine görä üýtgep biler.</p>';
+            resultDiv.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
