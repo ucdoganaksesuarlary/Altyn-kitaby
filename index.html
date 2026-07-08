@@ -125,6 +125,45 @@
             color: var(--gold-primary);
         }
 
+        /* Input Sazlamalary */
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .input-field:focus {
+            border-color: var(--gold-primary);
+            outline: none;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background-color: var(--gold-primary);
+            color: #000;
+            font-weight: bold;
+            padding: 12px 25px;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1rem;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--gold-hover);
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -144,75 +183,90 @@
 
     <div class="container">
 
-        <!-- MENÝU ULULYGY -->
         <div class="menu-container">
             <button class="menu-btn active" onclick="switchTab('chem-names')">🧪 Kislota Atlary</button>
             <button class="menu-btn" onclick="switchTab('slow-method')">⏳ 2-3 Günlük Usul (Nazaryýet)</button>
             <button class="menu-btn" onclick="switchTab('aqua-regia')">👑 Patşa Suwy (Taryhy Gözleg)</button>
+            <button class="menu-btn" onclick="switchTab('calculator-tab')">🧮 Altyn Hasaplaýjy</button>
         </div>
 
-        <!-- TAB 1: KISLOTA ATLARY -->
         <div id="chem-names" class="tab-content active">
             <div class="step-card">
                 <span class="step-number">Maglumat</span>
                 <h3>Metallurgiýada Ulanylýan Kislotalaryň Dürli Dillerdäki Atlary</h3>
-                <p>Laboratoriýa gollanmalarynda we halkara ylmy çeşmelerde maddalary dogry anyklamak üçin terminologiýa belligi:</p>
+                <p>Laboratoriýa gollanmalarynda we halkara ylmy çeşmelerde maddalary dogry anyklamak için terminologiýa belligi:</p>
                 
                 <ul class="chemical-list">
                     <li>
                         <strong>Hlorid Kislotasy (Hydrochloric Acid - HCl):</strong><br>
-                        • Türkmençe: Hlorid kislotasy (Tuz ruhy)<br>
-                        • Rusça: Соляная кислота (Хлороводородная кислота)<br>
-                        • Türkçe: Hidroklorik asit (Tuz ruhu)
+                        • Türkmençe: Hlorid kislotasy ("Tuz ruhy")<br>
+                        • Rusça: Соляная кислота ("Хлороводородная кислота")<br>
+                        • Türkçe: Hidroklorik asit ("Tuz ruhu")
                     </li>
                     <li>
                         <strong>Nitrat Kislotasy (Nitric Acid - HNO₃):</strong><br>
-                        • Türkmençe: Azot kislotasy (Şorap suwy)<br>
+                        • Türkmençe: Azot kislotasy ("Şorap suwy")<br>
                         • Rusça: Азотная кислота<br>
-                        • Türkçe: Nitrik asit (Kezzap)
+                        • Türkçe: Nitrik asit ("Kezzap")
                     </li>
                     <li>
                         <strong>Wodorod Peroksid (Hydrogen Peroxide - H₂O₂):</strong><br>
-                        • Türkmençe: Wodorod peroksid (Perekis)<br>
-                        • Rusça: Перекись водорода (Пероксид водорода)<br>
-                        • Türkçe: Hidrojen peroksit (Oksijenli su)
+                        • Türkmençe: Wodorod peroksid ("Perekis")<br>
+                        • Rusça: Перекись водорода ("Пероксид водорода")<br>
+                        • Türkçe: Hidrojen peroksit ("Oksijenli su")
                     </li>
                     <li>
                         <strong>Sulfat Kislotasy (Sulfuric Acid - H₂SO₄):</strong><br>
-                        • Türkmençe: Sulfat kislotasy (Akkumulýator suwy)<br>
+                        • Türkmençe: Sulfat kislotasy ("Akkumulýator suwy")<br>
                         • Rusça: Серная кислота<br>
-                        • Türkçe: Sülfürik asit (Zaç yağı)
+                        • Türkçe: Sülfürik asit ("Zaç yağı")
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- TAB 2: 2-3 GÜNLÜK USUL -->
         <div id="slow-method" class="tab-content">
             <div class="step-card">
-                <span class="step-number">Ugur 1</span>
-                <h3>Otag Temperaturasynda Mis Okislenmesi (2-3 Günlik Mekanizm)</h3>
-                <p>Ýönekeý kislota garyndylarynyň gyzdyrylman, haýal täsir etmegine esaslanýan ylmy teoriýa:</p>
+                <span class="step-number">Teoriýa</span>
+                <h3>Otag Temperaturasynda Mis Eritmek (Sagatba-Sagat Ugur)</h3>
+                <p>Garyndynyň gyzdyrylman, durlama tejribelerinde nähili ädimler bilen işleýändiginiň ylmy düşündirişi:</p>
                 <ul>
-                    <li><strong>Esasy Mekanizm:</strong> Hlorid kislotasy we pes göwreli wodorod peroksid otag temperaturasynda garyşdyrylanda, mis ýaly esasy metallary haýal ýagdaýda okisledip, eretmäge ukyplydyr. Altyn bu garynda durnukly galýar.</li>
-                    <li><strong>Wagt Faktory:</strong> Reaksiýanyň gyzdyrylman geçmegi sebäpli, kislotanyň metal gatlagyna doly aralaşmagy taryhy tejribelerde 2-3 gün töweregi wagt alýar.</li>
-                    <li><strong>Reňk Üýtgemegi:</strong> Reaksiýanyň dowamynda suwuklygyň reňki açyk gökden goýy ýaşyl reňke öwrülýär. Bu erkin ýagdaýda mis hloridiniň ($CuCl_2$) emele gelendiginiň we misiň erändiginiň ylmy subutnamasydyr.</li>
+                    <li><strong>1. Sagat (Gatyşma Etaby):</strong> Aýna gaba sary kontaktlar ýerleşdirilýär. Üstüne 2 ölçeg Hlorid kislotasy ($HCl$) we 1 ölçeg Wodorod peroksid ($H_2O_2$) guýulýar (Suwuklyk detallaryň üstüni ýapmaly). Suwuklyk ilki dury bolup, 15-30 minut aralygynda kislotanyň metal bilen özara täsiri netijesinde sarymtyl-ýaşyl reňke öwrülip başlaýar. Ownuk köpürjikler synlanýar.</li>
+                    <li><strong>12 - 24-nji Sagat (Okislenme Etaby):</strong> Kislota aşaky mis gatlagyny eretdikçe suwuklygyň reňki bütinleýin goýy gök-ýaşyl reňke öwrülýär. Bu erkin ýagdaýda mis hloridiniň ($CuCl_2$) emele gelendigini aňladýar. Astyndaky mis gatlagy erän altyn bölejikleri platalardan gopup, suwuklygyň ýüzüne ýa-da dübüne çöküp başlaýar.</li>
+                    <li><strong>48 - 72-nji Sagat (Doly Ereme we Süzüş):</strong> Ähli esasy metallar doly eräp gutarýar we diňe kislota durnukly bolan ýuka altyn gabyklary galýar. Ýaşyl suwuklyk süzgüç kagazyndan geçirilip, altyn bölejikleri kislotadan aýrylýar we arassa distillirlenen suw bilen ýuylyp durlanýar.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- TAB 3: PATŞA SUWY -->
         <div id="aqua-regia" class="tab-content">
             <div class="step-card">
-                <span class="step-number">Ugur 2</span>
+                <span class="step-number">Taryhy Gözleg</span>
                 <h3>Aqua Regia (Patşa Suwy) we Onuň Himiki Tebigaty</h3>
-                <p>Altyn ýaly durnukly we asyl metallary çözmek baradaky taryhy we akademiki maglumatlar:</p>
+                <p>Altyn ýaly durnukly asyl metallary çözmek baradaky akademiki maglumatlar:</p>
                 <ul>
                     <li><strong>Taryhy Bellik:</strong> Patşa suwy (Aqua Regia), iň ilkinji gezek 8-nji asyrda meşhur himik Jabir bin Haýýan tarapyndan tapylypdyr. Ol patşa metallary (altyn, platina) çözüp bilýändigi üçin bu ada laýyk görlüpdir.</li>
-                    <li><strong>Ylmy Formulasy:</strong> Konsentrirlenen Hlorid kislotasynyň ($HCl$) we Nitrat kislotasynyň ($HNO_3$) degişli ölçeglerde (köplenç 3:1 gatnaşykda) garyşmagyndan emele gelýän örän güýçli okislendirijidir.</li>
-                    <li><strong>Tizligi:</strong> Bu garyndy örän agressiw bolup, metallary gaty çalt (enjamlaşdyrylan laboratoriýalarda professional usulda we sorujy şkaflaryň içinde 1 sagatdan hem gysga wagtyň içinde) dargatmaga ukyplydyr. Reaksiýa mahaly sary-narynji reňkli örän zäherleýji nitrosil hlorid ($NOCl$) we azot dioksid ($NO_2$) gazlary çykýar.</li>
-                    <li><strong>Senagat Arassalygy:</strong> Altyn bu ergin dökülenden soň süzülip, soňra ýörite gaýtaryjylar (Meselem: Natriý metabisulfiti) arkaly çökdürilýär we arassalanýar.</li>
+                    <li><strong>Ylmy Formulasy:</strong> Konsentrirlenen Hlorid kislotasynyň ($HCl$) we Nitrat kislotasynyň ($HNO_3$) 3:1 gatnaşykda garyşmagyndan emele gelýän örän agressiw okislendirijidir.</li>
+                    <li><strong>Tizligi:</strong> Bu garyndy metallary gaty çalt (enjamlaşdyrylan laboratoriýalarda professional usulda we sorujy şkaflaryň içinde 1 sagatdan hem gysga wagtyň içinde) dargatmaga ukyplydyr. Reaksiýa mahaly sary-narynji reňkli örän zäherleýji nitrosil hlorid ($NOCl$) we azot dioksid ($NO_2$) gazlary çykýar.</li>
+                    <li><strong>Arassalygy:</strong> Altyn bu ergin dökülenden soň süzülip, soňra ýörite gaýtaryjylar (Meselem: Natriý metabisulfiti) arkaly çökdürilýär we senagat derejesinde arassalanýar.</li>
                 </ul>
+            </div>
+        </div>
+
+        <div id="calculator-tab" class="tab-content">
+            <div class="step-card">
+                <span class="step-number">Hasaplaýjy</span>
+                <h3>E-Waste Altyn Hasaplaýjysy</h3>
+                <p>Eliňizdäki galyndy platalaryň takmyny agramyny giriziň we çykjak altyny hasaplaň:</p>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="boardWeight" style="color:#aaa; font-size:0.9rem;">Platalaryň umumy agramy (KG):</label>
+                    <input type="number" id="boardWeight" class="input-field" placeholder="Meselem: 5">
+                </div>
+                
+                <button class="btn-gold" onclick="calculateGold()">Hasapla</button>
+                
+                <div id="calcResult" style="margin-top: 20px; padding: 15px; background: rgba(212,175,55,0.05); border: 1px dashed var(--gold-primary); border-radius: 4px; display: none; text-align: center;">
+                    </div>
             </div>
         </div>
 
@@ -224,17 +278,33 @@
 
     <script>
         function switchTab(tabId) {
-            // Ähli kontentleri gizlemek
             let contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
-            // Ähli düwmeleriň aktiwligini aýyrmak
             let buttons = document.querySelectorAll('.menu-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Saýlanan kontenti we düwmäni aktiw etmek
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
+        }
+
+        function calculateGold() {
+            let weight = parseFloat(document.getElementById('boardWeight').value);
+            let resultDiv = document.getElementById('calcResult');
+
+            if (!weight || weight <= 0) {
+                resultDiv.style.display = 'block';
+                resultDiv.style.borderColor = '#ff3333';
+                resultDiv.innerHTML = '<p style="color:#ff3333; margin:0;">Hökman dogry agram (KG) giriziň!</p>';
+                return;
+            }
+            
+            // 1 KG platadan ortaça 0.2 gram altyn hasaby
+            let estimatedGold = (weight * 0.2).toFixed(2);
+            
+            resultDiv.style.borderColor = 'var(--gold-primary)';
+            resultDiv.innerHTML = '<p style="margin: 5px 0; font-size: 1.2rem;">✨ Garaşylýan Altyn: <strong style="color: var(--gold-primary);">' + estimatedGold + '</strong> gram</p><p style="margin: 5px 0; font-size: 0.9rem; color: #888;">*Bu ortaça nazary hasaplamadyr, detallaryň görnüşine görä üýtgep biler.</p>';
+            resultDiv.style.display = 'block';
         }
     </script>
 </body>
