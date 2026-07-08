@@ -186,7 +186,8 @@
         <!-- MENÝU ULULYGY -->
         <div class="menu-container">
             <button class="menu-btn active" onclick="switchTab('chem-names')">🧪 Kislota Atlary</button>
-            <button class="menu-btn" onclick="switchTab('slow-method')">⏳ 2-3 Günlük Usul (Nazaryýet)</button>
+            <button class="menu-btn" onclick="switchTab('slow-method')">⏳ 2-3 Günlük Usul</button>
+            <button class="menu-btn" onclick="switchTab('chips-ram-tab')">💾 Çipler & RAM-lar</button>
             <button class="menu-btn" onclick="switchTab('aqua-regia')">👑 Patşa Suwy & Çökdürmek</button>
             <button class="menu-btn" onclick="switchTab('calculator-tab')">🧮 Altyn Hasaplaýjy</button>
         </div>
@@ -203,7 +204,7 @@
                         <strong>Hlorid Kislotasy (Hydrochloric Acid - HCl):</strong><br>
                         • Türkmençe: Hlorid kislotasy ("Tuz ruhy")<br>
                         • Rusça: Соляная кислота ("Хлороводородная кислота")<br>
-                        • Türkçe: Hidroklorik asit ("Tuz ruhu")
+                        • Türkçe: Hidroklorik asit ("Tuz kuru")
                     </li>
                     <li>
                         <strong>Nitrat Kislotasy (Nitric Acid - HNO<sub>3</sub>):</strong><br>
@@ -245,7 +246,7 @@
             <div class="step-card">
                 <span class="step-number">Teoriýa</span>
                 <h3>Otag Temperaturasynda Mis Eritmek (Sagatba-Sagat Ugur)</h3>
-                <p>Garyndynyň gyzdyrylman, durlama tejribelerinde nähili ädimler bilen işleýändiginiň ylmy düşündirişi:</p>
+                <p>Garyndynyň gyzdyrylman, durlama tejribelerinde nähili ädimler bilen işleýändiginiň ylmy düşündirişi (Diňe ýüzleýin sary kontaktlar üçindir):</p>
                 <ul>
                     <li><strong>1. Sagat (Gatyşma Etaby):</strong> Aýna gaba sary kontaktlar ýerleşdirilýär. Üstüne 2 ölçeg Hlorid kislotasy (HCl) we 1 ölçeg Wodorod peroksid (H<sub>2</sub>O<sub>2</sub>) guýulýar (Suwuklyk detallaryň üstüni ýapmaly). Suwuklyk ilki dury bolup, 15-30 minut aralygynda kislotanyň metal bilen özara täsiri netijesinde sarymtyl-ýaşyl reňke öwrülip başlaýar. Ownuk köpürjikler synlanýar.</li>
                     <li><strong>12 - 24-nji Sagat (Okislenme Etaby):</strong> Kislota aşaky mis gatlagyny eretdikçe suwuklygyň reňki bütinleýin goýy gök-ýaşyl reňke öwrülýär. Bu erkin ýagdaýda mis hloridiniň emele gelendigini aňladýar. Astyndaky mis gatlagy erän altyn bölejikleri platalardan gopup, suwuklygyň ýüzüne ýa-da dübüne çöküp başlaýar.</li>
@@ -254,7 +255,31 @@
             </div>
         </div>
 
-        <!-- TAB 3: PATŞA SUWY -->
+        <!-- TAB 3: ÇIPLER WE RAM-LAR (TÄZE BÖLÜM) -->
+        <div id="chips-ram-tab" class="tab-content">
+            <div class="step-card">
+                <span class="step-number">IC CHIPS & RAM</span>
+                <h3>Kompýuter Çipleri we Telefon RAM-larynyň Himiki Tebigaty</h3>
+                <p>Integrated Circuits (IC Çipler), RAM we prosessorlaryň içindäki altyn ýokarda görkezilen ýüzleýin 2-3 günlük usul (HCl + H<sub>2</sub>O<sub>2</sub>) bilen eremeýär. Çünki altyn simler çipleriň daşynda däl, plastik we epoksid gabygyň **içinde** ýerleşýär. Senagatda we professional laboratoriýalarda çipleri açmagiň ylmy ýollary:</p>
+                
+                <ul class="chemical-list">
+                    <li>
+                        <strong>Çipleriň Içki Gurluşy:</strong><br>
+                        Çipleriň içinde silisium krisalyny daşky aýajyklar bilen birikdirýän, saç gylyndan 10 esse inçe bolan **99.9% arassa altyn simler (Bonding wires)** bar. Şol sebäpli çipleri göni kislota salmazdan öň daşyndaky gara plastik korpusy aýyrmak gerek bolýar.
+                    </li>
+                    <li>
+                        <strong>1-nji Senagat Usuly: Ýakmak (Pyrolysis):</strong><br>
+                        Çipler ýörite ýokary temperaturaly peçlerde haýal ýagdaýda ýakylýar. Plastik we epoksid korpus kömre we küle öwrülýär. Emele gelen gara kül elenip we ýuylyp arassalanandan soň, içindäki durlanan metal bölejikleri (altyn simler we misler) anyklanýar we indiki tapgyrda Patşa suwuna salynýar.
+                    </li>
+                    <li>
+                        <strong>2-nji Senagat Usuly: Konsentrirlenen Sulfat Kislotasy:</strong><br>
+                        Plastik we gara gabygy himiki ýol bilen deşmek üçin laboratoriýalarda çipleri örän güýçli we gyzgyn Sulfat kislotasynyň (H<sub>2</sub>SO<sub>4</sub>) içine salýarlar. Bu agressiw kislota organiki plastigi bütinleý iýip, kömürleşdirýär we içindäki altyn simleriň daşyna çykmagyna şert döredýär.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 4: PATŞA SUWY -->
         <div id="aqua-regia" class="tab-content">
             <div class="step-card">
                 <span class="step-number">Taryhy Gözleg</span>
@@ -280,7 +305,7 @@
             </div>
         </div>
 
-        <!-- TAB 4: HASAPLAÝJY -->
+        <!-- TAB 5: HASAPLAÝJY -->
         <div id="calculator-tab" class="tab-content">
             <div class="step-card">
                 <span class="step-number">Hasaplaýjy</span>
@@ -339,4 +364,3 @@
     </script>
 </body>
 </html>
-
