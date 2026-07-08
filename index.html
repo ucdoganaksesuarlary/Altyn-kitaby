@@ -183,15 +183,13 @@
 
     <div class="container">
 
-        <!-- MENÝU ULULYGY -->
         <div class="menu-container">
             <button class="menu-btn active" onclick="switchTab('chem-names')">🧪 Kislota Atlary</button>
             <button class="menu-btn" onclick="switchTab('slow-method')">⏳ 2-3 Günlük Usul (Nazaryýet)</button>
-            <button class="menu-btn" onclick="switchTab('aqua-regia')">👑 Patşa Suwy (Taryhy Gözleg)</button>
+            <button class="menu-btn" onclick="switchTab('aqua-regia')">👑 Patşa Suwy & Çökdürmek</button>
             <button class="menu-btn" onclick="switchTab('calculator-tab')">🧮 Altyn Hasaplaýjy</button>
         </div>
 
-        <!-- TAB 1: KISLOTA ATLARY -->
         <div id="chem-names" class="tab-content active">
             <div class="step-card">
                 <span class="step-number">Maglumat</span>
@@ -202,7 +200,7 @@
                     <li>
                         <strong>Hlorid Kislotasy (Hydrochloric Acid - HCl):</strong><br>
                         • Türkmençe: Hlorid kislotasy ("Tuz ruhy")<br>
-                        • Rusça: Соляная浅кислота ("Хлороводородная кислота")<br>
+                        • Rusça: Соляная кислота ("Хлороводородная кислота")<br>
                         • Türkçe: Hidroklorik asit ("Tuz ruhu")
                     </li>
                     <li>
@@ -227,8 +225,20 @@
             </div>
         </div>
 
-        <!-- TAB 2: 2-3 GÜNLÜK USUL -->
         <div id="slow-method" class="tab-content">
+            <div class="step-card">
+                <span class="step-number">Enjamlar</span>
+                <h3>Laboratoriýada Gerekli Bolan Esasy Gurallar</h3>
+                <p>Kislota durlama tejribelerinde we metallary gaýtadan işlemek prosesinde hünärmenler tarapyndan ulanylýan ylmy gurallar:</p>
+                <ul class="chemical-list">
+                    <li><strong>Laboratoriýa Aýna Gaby (Beaker):</strong> Islendik kislota täsirine durnukly, gyzgyna çidamly ýörite aýna gaplar.</li>
+                    <li><strong>Ölçeg Menzurkasy ýa-da Laborator Şprisi:</strong> Kislotalaryň 2:1 ýa-da 3:1 gatnaşyklaryny göwrüm taýdan takyk hasaplamak üçin gural.</li>
+                    <li><strong>Süzgüç Kagazy (Filter Paper):</strong> Erän metallary dury suwuklykdan aýyrmak we diňe ýüzýän altyn pürçüklerini tutup saklamak üçin ulanarys.</li>
+                    <li><strong>Eretmek Kaby (Crucible):</strong> Altyn palçygyny 1000°C-den ýokary gyzgynlykda eritmek üçin ulanylýan palçykdan ýa-da grafitden ýasalan çidamly kiçijik gap.</li>
+                    <li><strong>Pürküji Gaz (Torch / Şalumo):</strong> Altyny ýokary temperaturada gyzdyryp, metal düwmesine öwürmek üçin ulanylýan ýokary gyzgynlyk beriji ýalynly gural.</li>
+                </ul>
+            </div>
+
             <div class="step-card">
                 <span class="step-number">Teoriýa</span>
                 <h3>Otag Temperaturasynda Mis Eritmek (Sagatba-Sagat Ugur)</h3>
@@ -241,7 +251,6 @@
             </div>
         </div>
 
-        <!-- TAB 3: PATŞA SUWY -->
         <div id="aqua-regia" class="tab-content">
             <div class="step-card">
                 <span class="step-number">Taryhy Gözleg</span>
@@ -251,12 +260,22 @@
                     <li><strong>Taryhy Bellik:</strong> Patşa suwy (Aqua Regia), iň ilkinji gezek 8-nji asyrda meşhur himik Jabir bin Haýýan tarapyndan tapylypdyr. Ol patşa metallary (altyn, platina) çözüp bilýändigi üçin bu ada laýyk görlüpdir.</li>
                     <li><strong>Ylmy Formulasy:</strong> Konsentrirlenen Hlorid kislotasynyň (HCl) we Nitrat kislotasynyň (HNO<sub>3</sub>) 3:1 gatnaşykda garyşmagyndan emele gelýän örän agressiw okislendirijidir.</li>
                     <li><strong>Tizligi:</strong> Bu garyndy metallary gaty çalt (enjamlaşdyrylan laboratoriýalarda professional usulda we sorujy şkaflaryň içinde 1 sagatdan hem gysga wagtyň içinde) dargatmaga ukyplydyr. Reaksiýa mahaly sary-narynji reňkli örän zäherleýji nitrosil hlorid (NOCl) we azot dioksid (NO<sub>2</sub>) gazlary çykýar.</li>
-                    <li><strong>Arassalygy:</strong> Altyn bu ergin dökülenden soň süzülip, soňra ýörite gaýtaryjylar (Meselem: Natriý metabisulfiti) arkaly çökdürilýär we senagat derejesinde arassalanýar.</li>
+                    <li><strong>Natriý Metabisulfiti bilen Çökdürmek:</strong> Erän altyny yzyna metal görnüşine öwürmek üçin senagatda Natriý metabisulfiti (SMB) ulanalar. Ol ionlary gaýtaryp, altyny gabyň dübüne goňur-gara palçyk (gold mud) edip çökerýär. Bu palçyk süzülip aýrylýar we gurlatylýar.</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">Iň Soňky Ädim</span>
+                <h3>Boraks (Borax) we Altyny Gyzdyryp Eretmek Nazaryýeti</h3>
+                <p>Guradylan altyn galyndylarynyň professional derejede hakyky sary altyn düwmesine (Gold button) öwrülme prinsipleri:</p>
+                <ul>
+                    <li><strong>Boraksyň (Flux) Rolu:</strong> Guradylan goňur altyn palçygy eretmek gabyyna (Crucible) salynýar. Üstüne ak reňkli Boraks (Borax - Na<sub>2</sub>B_4O_7 · 10H<sub>2</sub>O) poroşogy goşulýar. Boraks bir kislota däl-de, eridiji kömekçi serişdedir.</li>
+                    <li><strong>Gyzdyrmak Mekanizmi:</strong> Pürküji gaz (Torch) arkaly gabyň içi ýuwaş-ýuwaşdan gyzdyrylyp, altynyň ereme temperaturasy bolan 1064°C-den ýokary çykarylýar. Boraks gyzgynlykda eräp, aýna ýaly suwuk gatlak emele getirýär.</li>
+                    <li><strong>Arassalamak Täsiri:</strong> Boraks altynyň howadaky kislorod bilen okislenmeginiň doly öňüni alýar we metal bölejikleriniň gabyň içine ýapadylman, bir ýere jemlenip uly togalak bolmagyny üpjün edýär. Şeýle hem ol altynyň içindäki ähli galyndy kirleri we mikroskopik goşundylary (şlaklary) özüne çekip arassalaýar. Netijede diňe arassa, lowurdaýan sary altyn düwmesi emele gelýär.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- TAB 4: HASAPLAÝJY -->
         <div id="calculator-tab" class="tab-content">
             <div class="step-card">
                 <span class="step-number">Hasaplaýjy</span>
@@ -271,8 +290,7 @@
                 <button class="btn-gold" onclick="calculateGold()">Hasapla</button>
                 
                 <div id="calcResult" style="margin-top: 20px; padding: 15px; background: rgba(212,175,55,0.05); border: 1px dashed var(--gold-primary); border-radius: 4px; display: none; text-align: center;">
-                    <!-- Netije şu ýere çykar -->
-                </div>
+                    </div>
             </div>
         </div>
 
